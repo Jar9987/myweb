@@ -432,3 +432,12 @@ function MyButton() {
         </div>
     );
 }
+   function generateRandomCode() {
+const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+let 1  result = '';
+const length = 8; // Độ dài mã
+for (let i = 0; i < length; i++) {
+const randomIndex = Math.floor(Math.random() * characters.length);
+result += characters.charAt(randomIndex);
+}
+return result
