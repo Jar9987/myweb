@@ -1,15 +1,16 @@
 <html lang="en"><head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="https://pluto-cheat.x10.mx/Image/Pluto_Logo.png" type="image/png">
-        <title>Pluto Cheat™</title>
-        <meta property="og:title" content="Pluto Cheat™">
-        <meta property="og:description" content="Bank Info">
-        <meta property="og:image" content="https://pluto-cheat.x10.mx/Image/Pluto_Logo.png">
-        <meta property="og:url" content="https://pluto-cheat.x10.mx">
-        <meta property="og:type" content="website">
-        <meta name="theme-color" content="#ff0000">
-            <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://yt3.ggpht.com/ytc/AIdro_kq6YXb49jimZm2YludLYcB7k8cNgTm_4PC3ukkjBS36lsG88gBf4yVReewSB8_5Sc-1A=s88-c-k-c0x00ffffff-no-rj" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Pluto Cheat</title>
+    <meta property="og:title" content="Pluto Cheat">
+    <meta property="og:description" content="Powerful Blox Fruits Script. Dominate the game">
+    <meta property="og:image" content="https://yt3.ggpht.com/ytc/AIdro_kq6YXb49jimZm2YludLYcB7k8cNgTm_4PC3ukkjBS36lsG88gBf4yVReewSB8_5Sc-1A=s88-c-k-c0x00ffffff-no-rj>
+    <meta property="og:url" content="https://jar9987.github.io/myweb/">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#ff0000">
+       <style>
             body {
                 background-color: #1a0000;
                 color: #ffcccc;
@@ -18,165 +19,380 @@
                 padding: 0;
                 scroll-behavior: smooth;
             }
-            .container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                min-height: 20vh;
-                padding: 60px 1em;
-                box-sizing: border-box;
-                margin-bottom: 20px;
-            }
-            .bank-card {
-                display: flex;
+            .top-bar {
+                display: inline-flex;
                 justify-content: space-between;
                 align-items: center;
                 background-color: #3e0000;
-                padding: 20px;
-                border-radius: 10px;
+                padding: 10px 20px;
+                position: fixed;
                 width: 100%;
-                max-width: 800px;
-                transition: transform 0.5s, box-shadow 0.5s;
-                transform-style: preserve-3d;
-                box-shadow: none;
-                flex-wrap: wrap;
+                top: 0%;
+                z-index: 1000;
             }
-            .bank-card:hover {
-                transform: rotateY(10deg) rotateX(10deg) translateY(-10px);
-                box-shadow: 0px 0px 20px 10px #ff0000;
-            }
-            .bank-info {
-                flex: 1;
-                padding-right: 20px;
-            }
-            .bank-info h1 {
-                font-size: 2em;
+            .top-bar h1 {
                 margin: 0;
+                font-size: 1.5em;
+            }
+            .top-bar a {
                 color: #ffcccc;
+                text-decoration: none;
+                margin-left: 5px;
             }
-            .bank-info h2 {
+            .top-bar a:hover {
+                text-decoration: underline;
+            }
+            .container {
                 display: flex;
+                flex-direction: column;
+                justify-content: center;
                 align-items: center;
-                margin: 10px 0;
-                font-size: 1.2em;
+                min-height: 100vh;
+                padding: 60px 1em;
+                box-sizing: border-box;
             }
-            .copy-button {
-                margin-left: 10px;
-                padding: 5px 10px;
+            h1 {
+                font-size: 3em;
+                text-shadow: 0 0 10px #ff0000;
+                margin-bottom: 0;
+                text-align: center;
+            }
+            p {
+                font-size: 1.2em;
+                margin-top: 0.5em;
+                text-align: center;
+            }
+            .btn {
                 background-color: #ff0000;
-                color: #ffffff;
+                color: white;
+                padding: 0.8em 1.5em;
+                border: none;
+                border-radius: 5px;
+                font-size: 1em;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                margin-top: 1em;
+            }
+            .btn:hover {
+                background-color: #cc0000;
+            }
+            .small-btn {
+                background-color: #ff0000;
+                color: white;
+                padding: 1em 2em;
+                font-size: 0.8em;
                 border: none;
                 border-radius: 5px;
                 cursor: pointer;
-                font-size: 0.8em;
+                transition: background-color 0.3s ease;
+                margin-top: 1em;
             }
-            .copy-button:hover {
+            .small-btn:hover {
                 background-color: #cc0000;
             }
-            .qr-code {
-                display: flex;
-                align-items: center;
-                justify-content: center;
+            .animated-text {
+                animation: glow 2s infinite alternate;
             }
-            .qr-code img {
+            @keyframes glow {
+                from {
+                    text-shadow: 0 0 10px #ff0000;
+                }
+
+                to {
+                    text-shadow: 0 0 20px #ff0000;
+                }
+            }
+            .team-section {
+                text-align: center;
+                padding: 50px 20px;
+                background-color: #1a0000;
+                color: #ffcccc;
+            }
+            .team-section h1 {
+                font-size: 2.5em;
+                margin-bottom: 20px;
+            }
+            .developers {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+            .developer-card {
+                background-color: #3e0000;
+                color: #fff;
+                border-radius: 10px;
+                width: 300px;
+                padding: 20px;
+                text-align: center;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                transform-style: preserve-3d;
+                perspective: 1000px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .developer-card img {
+                border-radius: 50%;
                 width: 150px;
                 height: 150px;
+                object-fit: cover;
+                margin-bottom: 10px;
+            }
+            .developer-card h2 {
+                font-size: 1.5em;
+                margin: 10px 0;
+            }
+            .developer-card p {
+                margin: 5px 0;
+            }
+            .developer-card:hover {
+                transform: rotateY(10deg) rotateX(10deg) translateY(-10px);
+                box-shadow: 0px 0px 20px 10px #ff0000;
+            }
+            .developer-card:active {
+                transform: scale(0.95) rotateY(0deg) rotateX(0deg);
+                box-shadow: 0px 0px 20px 10px #ff0000;
+            }
+            @media (max-width: 768px) {
+                .developers {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .developer-card {
+                    width: 250px;
+                }
+            }
+            @media (max-width: 600px) {
+                .developer-card {
+                    width: 220px;
+                }
+            }
+            @media (max-width: 600px) {
+                h1 {
+                    font-size: 2.5em;
+                }
+                p {
+                    font-size: 1em;
+                }
+                .btn {
+                    padding: 1em 2em;
+                    font-size: 1.2em;
+                }
+                .developer-card {
+                    width: 200px;
+                }
+            }
+            @media (min-width: 1200px) {
+                h1 {
+                    font-size: 4em;
+                }
+                p {
+                    font-size: 1.3em;
+                }
+                .btn {
+                    padding: 1em 2em;
+                    font-size: 1.2em;
+                }
+            }
+            .games-section {
+                text-align: center;
+                padding: 50px 20px;
+                background-color: #1a0000;
+                color: #ffcccc;
+            }
+            .games-section h1 {
+                font-size: 2.5em;
+                margin-bottom: 20px;
+            }
+            .games-list {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+            .game-card {
+                background-color: #3e0000;
+                color: #fff;
+                border-radius: 10px;
+                width: 300px;
+                padding: 30px;
+                text-align: center;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                transform-style: preserve-3d;
+                perspective: 1000px;
+            }
+            .game-card img {
+                border-radius: 10px;
+                width: 100%;
+                height: 120px;
+                object-fit: cover;
+            }
+            .game-card h3 {
+                font-size: 1.2em;
+                margin: 10px 0;
+            }
+            .game-card p {
+                margin: 5px 0;
+            }
+            .game-card:hover {
+                transform: rotateY(10deg) rotateX(10deg) translateY(-10px);
+                box-shadow: 0px 0px 20px 10px #ff0000;
+            }
+            .game-card:active {
+                transform: scale(0.95) rotateY(0deg) rotateX(0deg);
+                box-shadow: 0px 0px 20px 10px #ff0000;
+            }
+            @media (max-width: 600px) {
+                .game-card {
+                    width: 200px;
+                }
+            }
+            @media (min-width: 1200px) {
+                .game-card {
+                    width: 350px;
+                    padding: 30px;
+                }
+            }
+            .social-icons {
+                margin-top: 15px;
+                display: flex;
+                justify-content: center;
+                flex-wrap: nowrap;
+                align-items: center;
+            }
+            .social-icons a {
+                margin: 0 10px;
+                color: #ffcccc;
+                font-size: 1.8em;
+                transition: color 0.3s ease;
+            }
+            .social-icons a:hover {
+                color: #ff0000;
+            }
+            @media (max-width: 600px) {
+                .social-icons a {
+                    font-size: 1.2em;
+                }
+            }
+            .social-icons2 {
+                margin-top: 30px;
+                display: flex;
+                justify-content: center;
+                flex-wrap: nowrap;
+                align-items: center;
+            }
+            .social-icons2 a {
+                margin: 0 10px;
+                color: #ffcccc;
+                font-size: 1.8em;
+                transition: color 0.3s ease;
+            }
+            .social-icons2 a:hover {
+                color: #ff0000;
+            }
+            @media (max-width: 600px) {
+                .social-icons2 a {
+                    font-size: 1.2em;
+                }
             }
             .footer {
                 font-size: 0.5em;
-                text-align: center;
-                padding: 10px;
+            }
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+            .dropdown-btn {
+                background-color: #3e0000;
                 color: #ffcccc;
-            }
-            .copy-notification {
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-                background-color: #cc0000;
-                color: #ffffff;
-                padding: 10px 20px;
+                border: none;
+                padding: 10px 15px;
+                font-size: 1.5em;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
                 border-radius: 5px;
-                box-shadow: 0px 0px 10px #3e0000;
-                opacity: 0;
-                transition: opacity 0.5s;
-                font-size: 1em;
+                position: relative;
+                right: 30px
             }
-            @media (max-width: 600px) {
-                .bank-card {
-                    flex-direction: column;
-                    text-align: center;
-                    padding: 15px;
-                }
-                .bank-info {
-                    padding-right: 0;
-                    text-align: center;
-                }
-                .bank-info h1 {
-                    font-size: 1.5em;
-                }
-                .bank-info h2 {
-                    font-size: 0.9em;
-                }
-                .qr-code {
-                    margin-top: 15px;
-                }
-                .qr-code img {
-                    width: 200px;
-                    height: 200px;
-                }
+            .dropdown-btn:hover {
+                background-color: #cc0000;
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #3e0000;
+                color: #ffcccc;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+                right: 0;
+                top: 100%;
+                border-radius: 5px;
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            .dropdown-content a {
+                color: #ffcccc;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+            .dropdown-content a:hover {
+                background-color: #cc0000;
             }
         </style>
     </head>
     <body>
+        <div class="top-bar">
+            <h1>Pluto Cheat</h1>
+            <div class="dropdown">
+                <button class="dropdown-btn">≡</button>
+                <div class="dropdown-content">
+                    <a href="https://pluto-cheat.x10.mx/Invite.html" target="_blank">Discord</a>
+                    <a href="#supported-games" onclick="SmoothScroll(event)">Supported Games</a>
+                    <a href="#dev-team" onclick="SmoothScroll(event)">Developers Team</a>
+                </div>
+            </div>
+        </div>        
         <div class="container">
-            <div class="bank-card">
-                <div class="bank-info">
-                    <h1>Thesieure</h1>
-                    <h2>Number: kmmwhocare
-                        <button class="copy-button" onclick="Copy('mytvacounthome@gmail.com')">Copy</button>
-                    </h2>
-                    <h2>Owner: Nghiêm Hoàng Tùng 
-                        <button class="copy-button" onclick="Copy('Nghiêm Hoàng Tùng')">Copy</button>
-                    </h2>
+            <h1 class="animated-text">Pluto Cheat</h1>
+            <p>Powerful Blox Fruits Script. Dominate the game</p>
+            <button class="btn" onclick="window.open('https://discord.gg/2e6NkZp2Mx')">Join Discord</button>
+        </div>
+        <div class="games-section" id="supported-games">
+            <h1>Supported Games</h1>
+            <div class="games-list">
+                <div class="game-card">
+                    <img src="https://pluto-cheat.x10.mx/Image/Blox.jpg">
+                    <h3>Blox Fruits</h3>
+                    <p>Version: On Developing</p>
+                    <p>Supported: Fluxus, Delta, Arceus X, Codex, Cryptic</p>
+                    <button class="small-btn" onclick="window.open('https://pluto-cheat.x10.mx/Blox_Fruits.html')">Show Script</button>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="bank-card">
-                <div class="bank-info">
-                    <h1>Momo</h1>
-                    <h2>Number: 0988496094 
-                        <button class="copy-button" onclick="Copy('0988496094')">Copy</button>
-                    </h2>
-                    <h2>Owner: NGHIEM HOANG TUNG 
-                        <button class="copy-button" onclick="Copy('NGHIEM HOANG TUNG')">Copy</button>
-                    </h2>
-                </div>
-                <div class="qr-code">
-                    <img src="https://pluto-cheat.x10.mx/Image/Momo.png" alt="Momo QR Code">
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="bank-card">
-                <div class="bank-info">
-                    <h1>MB Bank</h1>
-                    <h2>Number: 0988496094 
-                        <button class="copy-button" onclick="Copy('0988496094')">Copy</button>
-                    </h2>
-                    <h2>Owner: NGHIEM HOANG TUNG 
-                        <button class="copy-button" onclick="Copy('NGHIEM HOANG TUNG')">Copy</button>
-                    </h2>
-                </div>
-                <div class="qr-code">
-                    <img src="https://pluto-cheat.x10.mx/Image/MB.png" alt="MB Bank QR Code">
-                </div>
+        <div class="team-section" id="dev-team">
+            <h1>Developers Team</h1>
+            <div class="developers">
+                <div class="developer-card">
+                    <img src="https://yt3.ggpht.com/ytc/AIdro_kq6YXb49jimZm2YludLYcB7k8cNgTm_4PC3ukkjBS36lsG88gBf4yVReewSB8_5Sc-1A=s88-c-k-c0x00ffffff-no-rj">
+                    <h2>! xSync</h2>
+                    <p>Founder</p>
+                    <div class="skills">
+                        <p><strong>Skills:</strong></p>
+                        <p>Lua, Luau, Python, Node JS, HTML, CSS</p>
+                    </div>
+             
+                    </div>
+                </div>                
             </div>
         </div>
         <footer class="footer">
-            <p>© 2024 Pluto Cheat - Script. All rights reserved.</p>
-        </footer>
-        <div class="copy-notification" id="copyNotification">Copied to clipboard!</div>
+            <p>Copyright © mnhub - Script. All rights reserved.</p>
+        </footer>        
         
     
+
 </body></html>
