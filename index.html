@@ -397,47 +397,8 @@
 
 </body></html>
 
-// Giả sử bạn đang dùng React
-import React, { useState, useEffect } from 'react';
-
-function MyButton() {
-    const [countdown, setCountdown] = useState(70);
-    const [code, setCode] = useState('');
-
-    useEffect(() => {
-        if (countdown > 0) {
-            const interval = setInterval(() => {
-                setCountdown(countdown - 1);
-            }, 1000);
-            return () => clearInterval(interval);
-        } else {
-            // Tạo mã ngẫu nhiên
-            const randomCode = generateRandomCode();
-            setCode(randomCode);
-
-            // Gửi thông báo đến Discord
-            sendDiscordWebhook(randomCode);
-        }
-    }, [countdown]);
-
-    const handleClick = () => {
-        // Bắt đầu đếm ngược
-    };
-
-    return (
-        <div>
-            <button onClick={handleClick}>Lấy Mã</button>
-            {countdown > 0 && <p>Đếm ngược: {countdown} giây</p>}
-            {code && <p>Mã của bạn: {code}</p>}
-        </div>
-    );
-}
-   function generateRandomCode() {
-const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-let 1  result = '';
-const length = 8; // Độ dài mã
-for (let i = 0; i < length; i++) {
-const randomIndex = Math.floor(Math.random() * characters.length);
-result += characters.charAt(randomIndex);
-}
-return result
+14px;border-radius: 7px;padding: 5px 10px;margin: 5px;min-height: auto;min-width: 130px;line-height: 20px;vertical-align: middle;width: auto;cursor: pointer;display: inline-block;">
+                    <img src="https://i.imgur.com/79og0lh.png" style="padding:0; vertical-align:middle; padding-right:5px !important; width:auto !important; height:15px !important; display:inline-block !important; margin: 0!important; border: none!important; border-radius: unset!important; float: unset!important; background:none !important;">
+                    <span style="display:inline-block; vertical-align:middle; color:#fff">LẤY LINK NGAY</span>
+                </button>
+            </div>
