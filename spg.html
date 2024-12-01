@@ -1,0 +1,101 @@
+<html lang="en"><head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="https://pluto-cheat.x10.mx/Image/Pluto_Logo.png" type="image/png">
+        <title>Pluto Cheat</title>
+        <meta property="og:title" content="Pluto Cheat">
+        <meta property="og:description" content="Blox Fruits Script">
+        <meta property="og:image" content="https://pluto-cheat.x10.mx/Image/Pluto_Logo.png">
+        <meta property="og:url" content="https://pluto-cheat.x10.mx">
+        <meta property="og:type" content="website">
+        <meta name="theme-color" content="#ff0000">
+        <style>
+            body {
+                background-color: #1a0000;
+                color: #ffcccc;
+                font-family: 'Courier New', Courier, monospace;
+                margin: 0;
+                padding: 0;
+                scroll-behavior: smooth;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                padding: 80px 1em;
+                box-sizing: border-box;
+            }
+            h1 {
+                font-size: 2.5em;
+                text-shadow: 0 0 10px #ff0000;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            .script-box {
+                width: 80%;
+                max-width: 700px;
+                height: 50px;
+                margin-bottom: 20px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                background-color: #3e0000;
+                color: #fff;
+                padding: 10px;
+                font-family: monospace;
+                overflow-y: auto;
+                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+                transition: transform 0.3s, box-shadow 0.3s;
+            }
+            .script-box:hover {
+                transform: translateY(-5px) rotateY(5deg);
+                box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+            }
+            .btn {
+                background-color: #ff0000;
+                color: white;
+                padding: 0.8em 1.5em;
+                border: none;
+                border-radius: 5px;
+                font-size: 1em;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+            .btn:hover {
+                background-color: #cc0000;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container" id="script-viewer">
+            <h1>Main Script</h1>
+            <div class="script-box" id="mainscript" readonly="">
+                loadstring(game:HttpGet("https://pluto-cheat.x10.mx/Lua/Main.lua"))()
+            </div>
+            <button class="btn" onclick="Copy('mainscript')">Copy Script</button>
+            <h1>Kaitun Script</h1>
+            <div class="script-box" id="kaitunscript" readonly="">
+                loadstring(game:HttpGet("https://pluto-cheat.x10.mx/Lua/Kaitun.lua"))()
+            </div>
+            <button class="btn" onclick="Copy('kaitunscript')">Copy Script</button>
+            <h1>Auto Bounty Script</h1>
+            <div class="script-box" id="bountyscript" readonly="">
+                loadstring(game:HttpGet("https://pluto-cheat.x10.mx/Lua/Auto_Bounty.lua"))()
+            </div>
+            <button class="btn" onclick="Copy('bountyscript')">Copy Script</button>
+        </div>
+        <script>
+            function Copy(id) {
+                const script = document.getElementById(id);
+                const range = document.createRange();
+                range.selectNode(script);
+                window.getSelection().removeAllRanges();
+                window.getSelection().addRange(range);
+                document.execCommand('copy');
+                window.getSelection().removeAllRanges();
+            }
+        </script>
+    
+
+</body></html>
