@@ -397,5 +397,38 @@
 
 </body></html>
 
-<span data-counter="120" data-mess="Mã sẽ hiện sau %s giây" data-before="" data-code="MTg1WFla" class="coundownmobile" onclick="startcountdown(this); this.onclick=null;">
-        Lấy Mã Giảm Giá    </span>
+// Giả sử bạn đang dùng React
+import React, { useState, useEffect } from 'react';
+
+function MyButton() {
+    const [countdown, setCountdown] = useState(70);
+    const [code, setCode] = useState('');
+
+    useEffect(() => {
+        if (countdown > 0) {
+            const interval = setInterval(() => {
+                setCountdown(countdown - 1);
+            }, 1000);
+            return () => clearInterval(interval);
+        } else {
+            // Tạo mã ngẫu nhiên
+            const randomCode = generateRandomCode();
+            setCode(randomCode);
+
+            // Gửi thông báo đến Discord
+            sendDiscordWebhook(randomCode);
+        }
+    }, [countdown]);
+
+    const handleClick = () => {
+        // Bắt đầu đếm ngược
+    };
+
+    return (
+        <div>
+            <button onClick={handleClick}>Lấy Mã</button>
+            {countdown > 0 && <p>Đếm ngược: {countdown} giây</p>}
+            {code && <p>Mã của bạn: {code}</p>}
+        </div>
+    );
+}
