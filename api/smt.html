@@ -1,0 +1,43 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Kiểm tra Mã</title>
+</head>
+<body>
+    <input type="text" id="inputCode" placeholder="Nhập mã ở đây">
+    <button onclick="checkCode()">Kiểm tra</button>
+    <script src="script.js"></script>
+</body>
+</html>
+function checkCode() {
+    const inputCode = document.getElementById('inputCode').value;
+
+    // Gửi yêu cầu fetch để lấy mã từ trang web khác
+    fetch('https://jar9987.github.io/myweb/')
+        .then(response => response.text())
+        .then(data => {
+            // Tìm mã trong dữ liệu trả về (bạn cần điều chỉnh phần này cho phù hợp với cấu trúc HTML của trang https://jar9987.github.io/myweb/)
+            const correctCode = extractCodeFromData(data);
+
+            // So sánh mã
+            if (inputCode === correctCode) {
+                window.location.href = 'xyz.xyz';
+            } else {
+                alert('Mã không đúng!');
+            }
+        })
+        .catch(error => {
+            console.error('Lỗi khi lấy mã:', error);
+            alert('Có lỗi xảy ra, vui lòng thử lại sau.');
+        });
+}
+
+// Hàm hỗ trợ để trích xuất mã từ dữ liệu trả về
+function extractCodeFromData(data) {
+    // Bạn cần viết logic để trích xuất mã từ dữ liệu trả về
+    // Ví dụ: nếu mã nằm trong một thẻ có id là "code"
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(data, 'text/html');
+    const codeElement = doc.getElementById('code');
+    return codeElement.textContent;
+}
