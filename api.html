@@ -1,0 +1,17 @@
+<button id="myButton">Bấm vào đây</button>
+<script>
+  // Lấy nút bằng ID
+  const button = document.getElementById('myButton');
+
+  // Thêm sự kiện click vào nút
+  button.addEventListener('click', () => {
+    // Thực thi đoạn mã JavaScript của bạn
+    const script = document.createElement('script');
+    script.src = "https://publisher.linkvertise.com/cdn/linkvertise.js";
+    document.body.appendChild(script);
+
+    script.onload = () => {
+      linkvertise(939469, {whitelist: [""], blacklist: []});
+    };
+  });
+</script>
