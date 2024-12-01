@@ -1,47 +1,71 @@
- </script>
- 
- <!DOCTYPE html>
-<html>
-<head>
-    <title>Kiểm tra Mã</title>
-</head>
-<body>
-    <input type="text" id="inputCode" placeholder="Nhập mã ở đây">
-    <button onclick="checkCode()">Kiểm tra</button>
-    <script src="script.js"></script>
-</script>
-</body>
-</html>
-function checkCode() {
-    const inputCode = document.getElementById('inputCode').value;
-
-    // Gửi yêu cầu fetch để lấy mã từ trang web khác
-    fetch('https://jar9987.github.io/myweb/')
-        .then(response => response.text())
-        .then(data => {
-            // Tìm mã trong dữ liệu trả về (bạn cần điều chỉnh phần này cho phù hợp với cấu trúc HTML của trang https://jar9987.github.io/myweb/)
-            const correctCode = extractCodeFromData(data);
-
-            // So sánh mã
-            if (inputCode === correctCode) {
-                window.location.href = 'xyz.xyz';
-            } else {
-                alert('Mã không đúng!');
+<html lang="en"><head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="https://yt3.ggpht.com/ytc/AIdro_kq6YXb49jimZm2YludLYcB7k8cNgTm_4PC3ukkjBS36lsG88gBf4yVReewSB8_5Sc-1A=s88-c-k-c0x00ffffff-no-rj" type="image/png">
+        <title>Pluto Cheat</title>
+        <meta property="og:title" content="Pluto Cheat">
+        <meta property="og:description" content="Blox Fruits Script">
+        <meta property="og:image" content="https://yt3.ggpht.com/ytc/AIdro_kq6YXb49jimZm2YludLYcB7k8cNgTm_4PC3ukkjBS36lsG88gBf4yVReewSB8_5Sc-1A=s88-c-k-c0x00ffffff-no-rj">
+        <meta property="og:url" content="https://jar9987.github.io/myweb/">
+        <meta property="og:type" content="website">
+        <meta name="theme-color" content="#ff0000">
+        <style>
+            body {
+                background-color: #1a0000;
+                color: #ffcccc;
+                font-family: 'Courier New', Courier, monospace;
+                margin: 0;
+                padding: 0;
+                scroll-behavior: smooth;
             }
-        })
-        .catch(error => {
-            console.error('Lỗi khi lấy mã:', error);
-            alert('Có lỗi xảy ra, vui lòng thử lại sau.');
-        });
-}
+            .container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                padding: 80px 1em;
+                box-sizing: border-box;
+            }
+            h1 {
+                font-size: 2.5em;
+                text-shadow: 0 0 10px #ff0000;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            .script-box {
+                width: 80%;
+                max-width: 700px;
+                height: 50px;
+                margin-bottom: 20px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                background-color: #3e0000;
+                color: #fff;
+                padding: 10px;
+                font-family: monospace;
+                overflow-y: auto;
+                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+                transition: transform 0.3s, box-shadow 0.3s;
+            }
+            .script-box:hover {
+                transform: translateY(-5px) rotateY(5deg);
+                box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+            }
+            .btn {
+                background-color: #ff0000;
+                color: white;
+                padding: 0.8em 1.5em;
+                border: none;
+                border-radius: 5px;
+                font-size: 1em;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+            .btn:hover {
+                background-color: #cc0000;
+            }
+        </style>
 
-// Hàm hỗ trợ để trích xuất mã từ dữ liệu trả về
-function extractCodeFromData(data) {
-    // Bạn cần viết logic để trích xuất mã từ dữ liệu trả về
-    // Ví dụ: nếu mã nằm trong một thẻ có id là "code"
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(data, 'text/html');
-    const codeElement = doc.getElementById('code');
-    return codeElement.textContent;
-}
-</script>
+
+</body></html>
