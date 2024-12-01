@@ -1,37 +1,182 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Trang web ví dụ</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <div class="button">MNHUB - BEST FREE SCRIPT ROBLOX</div>
-        <div class="button">join disco</div>
-        <div class="button">GET KaITUN</div>
-        <div class="button">rd</div>
-    </div>
-</body>
-</html>
-
-.container {
-    background-color: pink;
-    width: 300px;
-    height: 200px;
-    text-align: center;
-}
-
-.button {
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
-    border: 1px solid black;
-}
-
-<div class="button" onclick="redirectToMuganpozie()">MNHUB - BEST FREE SCRIPT ROBLOX</div>
-
-<script>
-function redirectToMuganpozie() {
-    window.location.href = "https://muganpozie.com";
-}
-</script>
+<html lang="en"><head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="https://pluto-cheat.x10.mx/Image/Pluto_Logo.png" type="image/png">
+        <title>Pluto Cheat™</title>
+        <meta property="og:title" content="Pluto Cheat™">
+        <meta property="og:description" content="Bank Info">
+        <meta property="og:image" content="https://pluto-cheat.x10.mx/Image/Pluto_Logo.png">
+        <meta property="og:url" content="https://pluto-cheat.x10.mx">
+        <meta property="og:type" content="website">
+        <meta name="theme-color" content="#ff0000">
+            <style>
+            body {
+                background-color: #1a0000;
+                color: #ffcccc;
+                font-family: 'Courier New', Courier, monospace;
+                margin: 0;
+                padding: 0;
+                scroll-behavior: smooth;
+            }
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 20vh;
+                padding: 60px 1em;
+                box-sizing: border-box;
+                margin-bottom: 20px;
+            }
+            .bank-card {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #3e0000;
+                padding: 20px;
+                border-radius: 10px;
+                width: 100%;
+                max-width: 800px;
+                transition: transform 0.5s, box-shadow 0.5s;
+                transform-style: preserve-3d;
+                box-shadow: none;
+                flex-wrap: wrap;
+            }
+            .bank-card:hover {
+                transform: rotateY(10deg) rotateX(10deg) translateY(-10px);
+                box-shadow: 0px 0px 20px 10px #ff0000;
+            }
+            .bank-info {
+                flex: 1;
+                padding-right: 20px;
+            }
+            .bank-info h1 {
+                font-size: 2em;
+                margin: 0;
+                color: #ffcccc;
+            }
+            .bank-info h2 {
+                display: flex;
+                align-items: center;
+                margin: 10px 0;
+                font-size: 1.2em;
+            }
+            .copy-button {
+                margin-left: 10px;
+                padding: 5px 10px;
+                background-color: #ff0000;
+                color: #ffffff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 0.8em;
+            }
+            .copy-button:hover {
+                background-color: #cc0000;
+            }
+            .qr-code {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .qr-code img {
+                width: 150px;
+                height: 150px;
+            }
+            .footer {
+                font-size: 0.5em;
+                text-align: center;
+                padding: 10px;
+                color: #ffcccc;
+            }
+            .copy-notification {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background-color: #cc0000;
+                color: #ffffff;
+                padding: 10px 20px;
+                border-radius: 5px;
+                box-shadow: 0px 0px 10px #3e0000;
+                opacity: 0;
+                transition: opacity 0.5s;
+                font-size: 1em;
+            }
+            @media (max-width: 600px) {
+                .bank-card {
+                    flex-direction: column;
+                    text-align: center;
+                    padding: 15px;
+                }
+                .bank-info {
+                    padding-right: 0;
+                    text-align: center;
+                }
+                .bank-info h1 {
+                    font-size: 1.5em;
+                }
+                .bank-info h2 {
+                    font-size: 0.9em;
+                }
+                .qr-code {
+                    margin-top: 15px;
+                }
+                .qr-code img {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="bank-card">
+                <div class="bank-info">
+                    <h1>Thesieure</h1>
+                    <h2>Number: kmmwhocare
+                        <button class="copy-button" onclick="Copy('mytvacounthome@gmail.com')">Copy</button>
+                    </h2>
+                    <h2>Owner: Nghiêm Hoàng Tùng 
+                        <button class="copy-button" onclick="Copy('Nghiêm Hoàng Tùng')">Copy</button>
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="bank-card">
+                <div class="bank-info">
+                    <h1>Momo</h1>
+                    <h2>Number: 0988496094 
+                        <button class="copy-button" onclick="Copy('0988496094')">Copy</button>
+                    </h2>
+                    <h2>Owner: NGHIEM HOANG TUNG 
+                        <button class="copy-button" onclick="Copy('NGHIEM HOANG TUNG')">Copy</button>
+                    </h2>
+                </div>
+                <div class="qr-code">
+                    <img src="https://pluto-cheat.x10.mx/Image/Momo.png" alt="Momo QR Code">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="bank-card">
+                <div class="bank-info">
+                    <h1>MB Bank</h1>
+                    <h2>Number: 0988496094 
+                        <button class="copy-button" onclick="Copy('0988496094')">Copy</button>
+                    </h2>
+                    <h2>Owner: NGHIEM HOANG TUNG 
+                        <button class="copy-button" onclick="Copy('NGHIEM HOANG TUNG')">Copy</button>
+                    </h2>
+                </div>
+                <div class="qr-code">
+                    <img src="https://pluto-cheat.x10.mx/Image/MB.png" alt="MB Bank QR Code">
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>© 2024 Pluto Cheat - Script. All rights reserved.</p>
+        </footer>
+        <div class="copy-notification" id="copyNotification">Copied to clipboard!</div>
+        
+    
+</body></html>
