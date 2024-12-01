@@ -426,3 +426,54 @@
     </script>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nút Lấy Mã</title>
+    <style>
+        #countdown {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btnLayMa">Lấy Mã</button>
+    <div id="countdown"></div>
+    <div id="ketQua"></div>
+    <script>
+        const btnLayMa = document.getElementById('btnLayMa');
+        const countdownElement = document.getElementById('countdown');
+        const ketQuaElement = document.getElementById('ketQua');
+
+        let countdown = 70;
+
+        function startCountdown() {
+            const intervalId = setInterval(() => {
+                countdown--;
+                countdownElement.textContent = `Đếm ngược: ${countdown} giây`;
+                if (countdown === 0) {
+                    clearInterval(intervalId);
+                    const randomCode = generateRandomCode();
+                    ketQuaElement.textContent = `Mã của bạn là: ${randomCode}`;
+                }
+            }, 1000);
+        }
+
+        function generateRandomCode() {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let result = '';
+            const length = 8; // Độ dài mã
+            for (let i = 0; i < length; i++) {
+                const randomIndex = Math.floor(Math.random() * characters.length);
+                result += characters.charAt(randomIndex);
+            }
+            return result; 1 
+        }
+
+        btnLayMa.addEventListener('click', () => {
+            startCountdown();
+        });
+    </script>
+</body>
+</html>
