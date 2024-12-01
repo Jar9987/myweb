@@ -413,35 +413,26 @@
     <title>Nút Lấy Mã</title>
 </head>
 <body>
-    <button id="btnGetCode">Lấy Mã</button>
+    <button id="btnGetCode">taoMaNgauNhien</button>
     <div id="countdown"></div>
     <div id="code"></div>
     <script src="script.js"></script>
 
 </body>
 </html>
-const btnGetCode = document.getElementById('btnGetCode');
-const countdownElement = document.getElementById('countdown');
-const codeElement = document.getElementById('code');
 
-let countdown = 70;
-let isCounting = false;
+function taoMaNgauNhien() {
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let result = '';
+  const length = 8;
+  for (let i = 0; i < length; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    result += characters.charAt(randomIndex);
+  }
+  return result;
+}
 
-btnGetCode.addEventListener('click', () => {
-    if (!isCounting) {
-        isCounting = true;
-        btnGetCode.disabled = true;
-
-        const countdownInterval = setInterval(() => {
-            countdown--;
-            countdownElement.textContent = `Đếm ngược: ${countdown} giây`;
-
-            if (countdown === 0) {
-                clearInterval(countdownInterval);
-                codeElement.textContent = 'Mã của bạn: 4q47f520';
-                isCounting = false;
-                btnGetCode.disabled = false;
-            }
-        }, 1000);
-    }
+btnLayMa.addEventListener('click', () => {
+    const ma = taoMaNgauNhien();
+    ketQua.textContent = `Mã của bạn là: ${ma}`;
 });
